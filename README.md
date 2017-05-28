@@ -3,6 +3,19 @@
 Work with wildcard values by matching, searching, and filtering values that 
 match a given wildcard pattern.
 
+### Installation
+
+```
+yarn add wildcard-utils
+```
+
+**or**
+
+```
+npm install --save wildcard-utils
+```
+
+
 ### Simple Example
 
 A simple example using simple string matching against a given wildcard pattern.
