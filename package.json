@@ -1,6 +1,6 @@
 {
   "name": "wildcard-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Match against Wildcard values (works in browser)",
   "main": "dist/wildcard-utils.js",
   "author": "Braden R. Napier",
@@ -17,6 +17,13 @@
     "match",
     "regexp"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dash-OS/wildcard-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Dash-OS/wildcard-utils/issues"
+  },
   "devDependencies": {
     "app-root-dir": "^1.0.2",
     "babel-cli": "^6.24.1",
