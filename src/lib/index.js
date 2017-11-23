@@ -1,5 +1,5 @@
 /* @flow */
-import toWildcardPattern from 'wildcard-utils/to-pattern';
+import toWildcardPattern from '../to-pattern';
 
 import type {
   Wildcard$ToPatternTypes,

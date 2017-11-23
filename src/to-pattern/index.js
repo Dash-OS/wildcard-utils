@@ -1,10 +1,7 @@
 /* @flow */
-import type {
-  Wildcard$ToPatternTypes,
-  Wildcard$Config,
-} from 'wildcard-utils/lib/types';
+import type { Wildcard$ToPatternTypes, Wildcard$Config } from '../lib/types';
 
-import { isObjLiteral } from 'wildcard-utils/lib/utils';
+import { isObjLiteral } from '../lib/utils';
 
 const defaultConfig: Wildcard$Config = {
   logic: 'and',
