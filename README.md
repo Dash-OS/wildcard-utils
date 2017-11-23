@@ -75,5 +75,8 @@ const WC = new Wildcard();
 ```js
 import toWildcardPattern from 'wildcard-utils/to-pattern';
 
-const pattern = toWildcardPattern('ONE*TWO*THREE');
+const pattern = toWildcardPattern(['ONE*TWO*THREE', 'FOUR*FIVE*SIX'], {
+  logic: 'or',
+  flags: 'i',
+});
 ```
