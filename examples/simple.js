@@ -1,7 +1,8 @@
 /* @flow */
+import Wildcard from 'wildcard-utils';
+import toWildcardPattern from 'wildcard-utils/to-pattern';
+
 import { log } from '../utils/log';
-import { Wildcard } from '../src/main';
-import toWildcardPattern from '../src/toPattern';
 
 log('-------------------------------------');
 
