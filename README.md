@@ -27,7 +27,13 @@ work.
 
 ## Examples
 
-### Simple Example
+> This package provides extreme flexibility for searching values for wildcard
+> matches. While the example below is simple, you are encouraged to take a look
+> at the
+> [examples folders](https://github.com/Dash-OS/wildcard-utils/tree/master/examples)
+> for examples of the more advanced functionality that is available.
+
+### Simple String Example
 
 A simple example using simple string matching against a given wildcard pattern.
 
@@ -56,3 +62,18 @@ There are two ways you can use this package. If you simply wish to use the
 simplistic pattern generator that is used to build the `RegExp` values, you can
 import from `wildcard-utils/to-pattern`. For the full-featured version, import
 the `Wildcard` class directly.
+
+### Wildcard Class
+
+```js
+import Wildcard from 'wildcard-utils';
+const WC = new Wildcard();
+```
+
+### Pattern Generator
+
+```js
+import toWildcardPattern from 'wildcard-utils/to-pattern';
+
+const pattern = toWildcardPattern('ONE*TWO*THREE');
+```
