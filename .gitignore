@@ -1,3 +1,6 @@
 node_modules
-dist
+/dist/
 yarn.lock
+.DS_Store
+/to-pattern/
+/lib/

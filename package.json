@@ -1,22 +1,29 @@
 {
   "name": "wildcard-utils",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "Match against Wildcard values (works in browser)",
-  "main": "dist/wildcard-utils.js",
+  "main": "lib/index.js",
   "author": "Braden R. Napier",
   "license": "MIT",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --require co-mocha",
-    "prepublish": "npm run build:prod",
-    "build:prod": "cross-env NODE_ENV=production BABEL_ENV=production babel-node config/scripts/build",
-    "build": "babel-node config/scripts/build"
+    "flow": "flow",
+    "build":
+      "cross-env NODE_ENV=production rimraf lib extras to-pattern && npm-run-all -p build:**",
+    "build:src:babel": "babel src/main --out-dir lib",
+    "build:extras:babel": "babel src/to-pattern --out-dir to-pattern",
+    "build:src:flow": "flow-copy-source src/main lib",
+    "build:extras:flow": "flow-copy-source src/to-pattern to-pattern",
+    "prepublish": "npm-run-all build"
   },
-  "keywords": [
-    "wildcard",
-    "glob",
-    "match",
-    "regexp"
+  "files": [
+    "lib",
+    "flowlibs",
+    "to-pattern",
+    ".flowconfig",
+    ".eslintrc",
+    ".babelrc"
   ],
+  "keywords": ["wildcard", "glob", "match", "regexp", "filter", "search"],
   "repository": {
     "type": "git",
     "url": "https://github.com/Dash-OS/wildcard-utils.git"
@@ -27,20 +34,25 @@
   "devDependencies": {
     "app-root-dir": "^1.0.2",
     "babel-cli": "^6.24.1",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.2",
     "babel-loader": "^7.0.0",
     "babel-plugin-lodash": "^3.2.11",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-babili": "^0.1.2",
-    "babel-preset-env": "^1.5.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-minify": "^0.2.0",
     "babel-preset-stage-0": "^6.24.1",
-    "babili-webpack-plugin": "^0.1.1",
-    "colors": "^1.1.2",
     "cross-env": "^5.0.0",
-    "happypack": "^3.1.0",
-    "lodash-webpack-plugin": "^0.11.4",
-    "rimraf": "^2.6.1",
-    "webpack": "^2.6.1",
-    "webpack-node-externals": "^1.6.0",
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-import": "^2.8.0",
+    "flow-bin": "^0.59.0",
+    "flow-copy-source": "^1.2.1",
+    "npm-run-all": "^4.1.2",
+    "rimraf": "^2.6.2",
     "yargs": "^8.0.1"
   }
 }
