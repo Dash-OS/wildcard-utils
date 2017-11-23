@@ -1,6 +1,6 @@
 # wildcard-utils
 
-Small, Flow-Covered, Zero-Dependency package to work with wildcard (\*) values
+A small, flow-covered, zero-dependency package to work with wildcard (\*) values
 by matching, searching, and filtering values that match a given wildcard
 pattern.
 
@@ -84,6 +84,8 @@ the `Wildcard` class directly.
 ### Common Flow Types
 
 ```js
+export type Wildcard$RegExpFlags = $CharSet<'gimsuy'>;
+
 export type Wildcard$ToPatternTypes =
   | string
   | Array<string>
@@ -92,7 +94,7 @@ export type Wildcard$ToPatternTypes =
 
 export type Wildcard$Config = {
   logic: 'and' | 'or',
-  flags: $CharSet<'gimsuy'>,
+  flags: Wildcard$RegExpFlags,
 };
 ```
 
@@ -119,6 +121,10 @@ const pattern = toWildcardPattern(['ONE*TWO*THREE', 'FOUR*FIVE*SIX'], {
 ```js
 import Wildcard from 'wildcard-utils';
 const WC = new Wildcard();
+
+WC.case(false)
+  .logic('or')
+  .pattern(['foo*', 'bar*', 'baz*qux']);
 ```
 
 #### `.pattern()`
@@ -169,6 +175,12 @@ provided, it checks the last provided value to `.pattern()`.
 
 ```js
 (match: boolean, compile?: boolean) => Wildcard;
+```
+
+#### `.flags()`
+
+```js
+(flags: Wildcard$RegExpFlags, compile?: boolean) => Wildcard;
 ```
 
 #### `.reset()`

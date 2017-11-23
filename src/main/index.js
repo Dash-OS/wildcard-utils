@@ -1,6 +1,10 @@
 /* @flow */
 import toWildcardPattern from 'wildcard-utils/to-pattern';
-import type { Wildcard$ToPatternTypes, Wildcard$Config } from './types';
+import type {
+  Wildcard$ToPatternTypes,
+  Wildcard$Config,
+  Wildcard$RegExpFlags,
+} from './types';
 
 import { isObjLiteral, hasWildcard } from './utils';
 
@@ -104,6 +108,14 @@ class Wildcard {
     } else if (!match && !this.config.flags.includes('i')) {
       this.config.flags += 'i';
     }
+    if (compile) {
+      this.pattern(this._raw, true);
+    }
+    return this;
+  }
+
+  flags(flags: Wildcard$RegExpFlags, compile?: boolean) {
+    this.config.flags = flags;
     if (compile) {
       this.pattern(this._raw, true);
     }

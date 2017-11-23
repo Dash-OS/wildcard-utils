@@ -1,5 +1,7 @@
 /* @flow */
 
+export type Wildcard$RegExpFlags = $CharSet<'gimsuy'>;
+
 export type Wildcard$ToPatternTypes =
   | string
   | Array<string>
@@ -8,5 +10,5 @@ export type Wildcard$ToPatternTypes =
 
 export type Wildcard$Config = {
   logic: 'and' | 'or',
-  flags: $CharSet<'gimsuy'>,
+  flags: Wildcard$RegExpFlags,
 };
