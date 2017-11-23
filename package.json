@@ -55,6 +55,6 @@
     "flow-copy-source": "^1.2.1",
     "npm-run-all": "^4.1.2",
     "rimraf": "^2.6.2",
-    "wildcard-utils": "https://github.com/Dash-OS/wildcard-utils"
+    "wildcard-utils": "^2.2.0"
   }
 }
