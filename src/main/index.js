@@ -34,7 +34,7 @@ class Wildcard {
 
   match(
     data: Wildcard$ToPatternTypes,
-    pattern: RegExp | Wildcard$ToPatternTypes = this._pattern,
+    pattern?: RegExp | Wildcard$ToPatternTypes = this._pattern,
   ) {
     if (!(pattern instanceof RegExp)) {
       pattern = toWildcardPattern(pattern, this.config);
@@ -49,7 +49,7 @@ class Wildcard {
     return false;
   }
 
-  filter(data: Wildcard$ToPatternTypes, nomatch: mixed = undefined) {
+  filter<D: Wildcard$ToPatternTypes>(data: D, nomatch: mixed = undefined) {
     if (typeof data === 'string') {
       if (this.match(data)) {
         return data;
