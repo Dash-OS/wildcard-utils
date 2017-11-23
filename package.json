@@ -1,8 +1,8 @@
 {
   "name": "wildcard-utils",
-  "version": "2.1.2",
-  "description": "Match against Wildcard values (works in browser)",
-  "main": "lib/index.js",
+  "version": "2.1.3",
+  "description":
+    "A small, flow-covered, zero-dependency package to work with wildcard (*) values by matching, searching, and filtering values that match a given wildcard pattern. (Works in Browser)",
   "author": "Braden R. Napier",
   "license": "MIT",
   "scripts": {
