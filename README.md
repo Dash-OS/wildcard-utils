@@ -91,6 +91,21 @@ import Wildcard from 'wildcard-utils';
 const WC = new Wildcard();
 ```
 
+#### Common Flow Types
+
+```js
+export type Wildcard$ToPatternTypes =
+  | string
+  | Array<string>
+  | Set<string>
+  | { [key: string]: * };
+
+export type Wildcard$Config = {
+  logic: 'and' | 'or',
+  flags: $CharSet<'gimsuy'>,
+};
+```
+
 #### `.pattern()`
 
 ```js

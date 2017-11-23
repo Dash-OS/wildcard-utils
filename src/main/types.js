@@ -8,5 +8,5 @@ export type Wildcard$ToPatternTypes =
 
 export type Wildcard$Config = {
   logic: 'and' | 'or',
-  flags: string,
+  flags: $CharSet<'gimsuy'>,
 };
