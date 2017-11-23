@@ -1,7 +1,15 @@
 # wildcard-utils
 
-Work with wildcard values by matching, searching, and filtering values that
-match a given wildcard pattern.
+Small, Flow-Covered, Zero-Dependency package to work with wildcard (\*) values
+by matching, searching, and filtering values that match a given wildcard
+pattern.
+
+Values can be `string`, `Array<string>`, `Set<string>`, `{ [key: string]: any
+}`. Support for `Map` is also planned in the future.
+
+Reverse filtering is also available to search the above types as patterns
+instead of as matches
+([see examples](https://github.com/Dash-OS/wildcard-utils/tree/master/examples)).
 
 ### BROWSER COMPATIBLE!
 
