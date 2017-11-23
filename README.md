@@ -3,7 +3,9 @@
 Work with wildcard values by matching, searching, and filtering values that
 match a given wildcard pattern.
 
-### Installation
+### BROWSER COMPATIBLE!
+
+## Installation
 
 ```
 yarn add wildcard-utils
