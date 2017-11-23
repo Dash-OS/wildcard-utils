@@ -1,12 +1,15 @@
 {
   "name": "wildcard-utils",
-  "version": "2.2.0",
-  "description": "A small, flow-covered, zero-dependency package to work with wildcard (*) values by matching, searching, and filtering values that match a given wildcard pattern. (Works in Browser)",
+  "version": "2.2.1",
+  "description":
+    "A small, flow-covered, zero-dependency package to work with wildcard (*) values by matching, searching, and filtering values that match a given wildcard pattern. (Works in Browser)",
   "author": "Braden R. Napier",
   "license": "MIT",
+  "main": "lib/index.js",
   "scripts": {
     "flow": "flow",
-    "build": "cross-env NODE_ENV=production rimraf lib extras to-pattern && npm-run-all -p build:**",
+    "build":
+      "cross-env NODE_ENV=production rimraf lib extras to-pattern && npm-run-all -p build:**",
     "build:src:babel": "babel src/main --out-dir lib",
     "build:extras:babel": "babel src/to-pattern --out-dir to-pattern",
     "build:src:flow": "flow-copy-source src/main lib",
@@ -21,14 +24,7 @@
     ".eslintrc",
     ".babelrc"
   ],
-  "keywords": [
-    "wildcard",
-    "glob",
-    "match",
-    "regexp",
-    "filter",
-    "search"
-  ],
+  "keywords": ["wildcard", "glob", "match", "regexp", "filter", "search"],
   "repository": {
     "type": "git",
     "url": "https://github.com/Dash-OS/wildcard-utils.git"
