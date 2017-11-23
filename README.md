@@ -73,7 +73,29 @@ simplistic pattern generator that is used to build the `RegExp` values, you can
 import from `wildcard-utils/to-pattern`. For the full-featured version, import
 the `Wildcard` class directly.
 
+### Common Flow Types
+
+```js
+export type Wildcard$ToPatternTypes =
+  | string
+  | Array<string>
+  | Set<string>
+  | { [key: string]: * };
+
+export type Wildcard$Config = {
+  logic: 'and' | 'or',
+  flags: $CharSet<'gimsuy'>,
+};
+```
+
 ### RegExp Generator
+
+```js
+declare function toWildcardPattern(
+  patterns: Wildcard$ToPatternTypes,
+  config?: $Shape<Wildcard$Config>,
+): RegExp;
+```
 
 ```js
 import toWildcardPattern from 'wildcard-utils/to-pattern';
@@ -89,21 +111,6 @@ const pattern = toWildcardPattern(['ONE*TWO*THREE', 'FOUR*FIVE*SIX'], {
 ```js
 import Wildcard from 'wildcard-utils';
 const WC = new Wildcard();
-```
-
-#### Common Flow Types
-
-```js
-export type Wildcard$ToPatternTypes =
-  | string
-  | Array<string>
-  | Set<string>
-  | { [key: string]: * };
-
-export type Wildcard$Config = {
-  logic: 'and' | 'or',
-  flags: $CharSet<'gimsuy'>,
-};
 ```
 
 #### `.pattern()`
