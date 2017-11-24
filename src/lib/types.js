@@ -2,11 +2,7 @@
 
 export type Wildcard$RegExpFlags = $CharSet<'gimsuy'>;
 
-export type Wildcard$ToPatternTypes =
-  | string
-  | Array<string>
-  | Set<string>
-  | { [key: string]: * };
+export type Wildcard$ToPatternTypes = mixed;
 
 export type Wildcard$Config = {
   logic: 'and' | 'or',

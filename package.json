@@ -1,6 +1,6 @@
 {
   "name": "wildcard-utils",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "description":
     "A small, flow-covered, zero-dependency package to work with wildcard (*) values by matching, searching, and filtering values that match a given wildcard pattern. (Works in Browser)",
   "author": "Braden R. Napier",
